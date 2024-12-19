@@ -1,0 +1,679 @@
+                /* Reset Styles */
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            /* General Styles */
+            
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+            }
+            
+            header {
+                background-color: #b30000;
+                /* Festive red background */
+                padding: 1rem 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            
+            header .logo img {
+                height: 50px;
+                /* Adjust logo size */
+                width: auto;
+            }
+            
+            nav ul {
+                list-style: none;
+                /* Removes default bullet points */
+                padding: 0;
+                margin: 0;
+                display: flex;
+                gap: 1.5rem;
+                /* Spacing between links */
+                justify-content: center;
+            }
+            
+            nav ul li {
+                display: inline-block;
+                margin: 0 10px
+            }
+            
+            nav ul li a {
+                text-decoration: none;
+                /* Removes underline */
+                color: white;
+                /* White text for contrast */
+                font-size: 1rem;
+                font-weight: bold;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                transition: background-color 0.3s ease;
+            }
+            
+            nav ul li a:hover {
+                background-color: #ff5733;
+                /* Adds a hover effect with a lighter red */
+            }
+            /* General Section Styling */
+            
+            section {
+                padding: 2rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            /* Home Section */
+            
+            #home {
+                background: url('images/home_background.jpg') no-repeat center center/cover;
+                color: rgb(245, 2, 2);
+                text-align: center;
+                padding: 6rem 2rem;
+                height: 100vh;
+                /* Full viewport height */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .home-content h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .home-content p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                max-width: 600px;
+                line-height: 1.5;
+            }
+            
+            .home-content .btn {
+                background-color: #ff5733;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            
+            .home-content .btn:hover {
+                background-color: #b30000;
+            }
+            /* About Section */
+            
+            #about {
+                padding: 4rem 2rem;
+                text-align: center;
+                background: #f9f9f9;
+            }
+            
+            #about h2 {
+                font-size: 2rem;
+                color: #b30000;
+                margin-bottom: 1.5rem;
+            }
+            
+            .about-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .about-content img {
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            
+            .about-content div {
+                max-width: 600px;
+                text-align: left;
+            }
+            
+            .about-content p {
+                font-size: 1.1rem;
+                color: #333;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+            
+            .about-content .btn {
+                background-color: #b30000;
+                color: white;
+                padding: 0.75rem 1.5rem;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            
+            .about-content .btn:hover {
+                background-color: #ff5733;
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                #home {
+                    padding: 4rem 1rem;
+                }
+                .about-content {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .about-content img {
+                    max-width: 100%;
+                }
+            }
+            /* Our Services Section */
+            
+            #services {
+                text-align: center;
+                /* Centers the heading text */
+                margin-top: 2rem;
+                /* Adds spacing at the top */
+            }
+            
+            #services h2 {
+                font-size: 2rem;
+                /* Adjusts the font size for better emphasis */
+                color: #b30000;
+                /* Festive color for the heading */
+                margin-bottom: 1.5rem;
+                /* Adds space between the heading and the grid */
+            }
+            /* Service Items (Grid Layout) */
+            
+            #services .service-item {
+                background: #f9f9f9;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 1rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            #services .service-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            }
+            
+            #services .service-item img {
+                max-width: 80%;
+                /* Limits the image width to 80% of the container */
+                height: auto;
+                /* Maintains aspect ratio */
+                margin: 0 auto;
+                /* Centers the image within the service card */
+                display: block;
+                /* Ensures the image behaves like a block element */
+                border-radius: 8px;
+                /* Keeps the rounded corners for consistency */
+            }
+            
+            #services .service-item h3 {
+                font-size: 1.2rem;
+                color: #b30000;
+                margin: 1rem 0 0.5rem;
+            }
+            
+            #services .service-item p {
+                font-size: 1rem;
+                color: #333;
+            }
+            
+            #gallery {
+                background-color: #f9f9f9;
+                padding: 3rem 2rem;
+                text-align: center;
+            }
+            
+            #gallery h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                color: #b30000;
+                /* Festive red for headings */
+            }
+            
+            .gallery-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .gallery-item {
+                background-color: #fff;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+            }
+            
+            .gallery-item:hover {
+                transform: scale(1.05);
+            }
+            
+            .gallery-item h3 {
+                font-size: 1.2rem;
+                color: #333;
+                padding: 1rem;
+                background-color: #b30000;
+                color: white;
+                margin: 0;
+            }
+            
+            .before-after {
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem;
+            }
+            
+            .before-after img {
+                width: 48%;
+                height: auto;
+                border-radius: 5px;
+                transition: transform 0.3s ease;
+            }
+            
+            .before-after img:hover {
+                transform: scale(1.05);
+            }
+            
+            @media (max-width: 768px) {
+                .before-after {
+                    flex-direction: column;
+                }
+                .before-after img {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                #services {
+                    text-align: center;
+                    /* Ensures consistent centering on smaller screens */
+                }
+                #services .service-item {
+                    margin: 0 auto;
+                    /* Centers the service items */
+                }
+            }
+            /* Booking Section Styling */
+            
+            #booking {
+                background-color: #f9f9f9;
+                padding: 3rem 2rem;
+                text-align: center;
+            }
+            
+            #booking h2 {
+                font-size: 2rem;
+                color: #b30000;
+                /* Festive red */
+                margin-bottom: 1rem;
+            }
+            
+            #booking p {
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 2rem;
+            }
+            /* Booking Form */
+            
+            .booking-form {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .booking-form label {
+                display: block;
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 0.5rem;
+                text-align: left;
+            }
+            
+            .booking-form input,
+            .booking-form textarea {
+                width: 100%;
+                padding: 0.8rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+                color: #333;
+            }
+            
+            .booking-form input:focus,
+            .booking-form textarea:focus {
+                border-color: #b30000;
+                outline: none;
+            }
+            
+            .booking-form button {
+                background-color: #b30000;
+                color: white;
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            
+            .booking-form button:hover {
+                background-color: #ff5733;
+            }
+            /* Testimonial Section */
+            
+            #testimonials {
+                background-color: #fff;
+                padding: 3rem 2rem;
+                text-align: center;
+            }
+            
+            #testimonials h2 {
+                font-size: 2rem;
+                color: #b30000;
+                /* Festive red */
+                margin-bottom: 2rem;
+            }
+            
+            .testimonial-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .testimonial-item {
+                background-color: #f9f9f9;
+                padding: 1.5rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .testimonial-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+            
+            .testimonial-item img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+            }
+            
+            .testimonial-item h3 {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 0.5rem;
+            }
+            
+            .testimonial-item p {
+                font-size: 1rem;
+                color: #555;
+                line-height: 1.6;
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                .testimonial-container {
+                    grid-template-columns: 1fr;
+                }
+            }
+            /* Contact Us Section */
+            
+            #contact {
+                background-color: #f9f9f9;
+                padding: 3rem 2rem;
+                text-align: center;
+            }
+            
+            #contact h2 {
+                font-size: 2rem;
+                color: #b30000;
+                /* Festive red */
+                margin-bottom: 1rem;
+            }
+            
+            #contact p {
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 2rem;
+            }
+            
+            .contact-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+            }
+            /* Contact Information */
+            
+            .contact-info {
+                max-width: 300px;
+                text-align: left;
+            }
+            
+            .contact-info h3 {
+                font-size: 1.5rem;
+                color: #333;
+                margin-bottom: 1rem;
+            }
+            
+            .contact-info p {
+                font-size: 1rem;
+                color: #555;
+                line-height: 1.5;
+            }
+            /* Contact Form */
+            
+            .contact-form {
+                max-width: 600px;
+                width: 100%;
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .contact-form label {
+                display: block;
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 0.5rem;
+            }
+            
+            .contact-form input,
+            .contact-form textarea {
+                width: 100%;
+                padding: 0.8rem;
+                margin-bottom: 1.5rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1rem;
+            }
+            
+            .contact-form input:focus,
+            .contact-form textarea:focus {
+                border-color: #b30000;
+                outline: none;
+            }
+            
+            .contact-form button {
+                background-color: #b30000;
+                color: white;
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            
+            .contact-form button:hover {
+                background-color: #ff5733;
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                .contact-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .contact-info {
+                    text-align: center;
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 768px) {
+                #booking {
+                    padding: 2rem 1rem;
+                }
+                .booking-form {
+                    padding: 1.5rem;
+                }
+                .booking-form label {
+                    text-align: left;
+                }
+            }
+            
+            form {
+                max-width: 400px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            form label {
+                margin-top: 10px;
+            }
+            
+            form input,
+            form textarea,
+            form button {
+                margin-top: 5px;
+                padding: 10px;
+                width: 100%;
+            }
+            
+            form button {
+                background: #b30000;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            
+            footer {
+                background-color: #333;
+                color: white;
+                padding: 3rem 2rem;
+                text-align: left;
+            }
+            
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+            
+            .footer-info h3 {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            
+            .footer-info p {
+                font-size: 1rem;
+                max-width: 250px;
+            }
+            
+            .footer-links h4,
+            .footer-social h4,
+            .footer-contact h4 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .footer-links ul,
+            .footer-social ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            
+            .footer-links li,
+            .footer-social li {
+                margin-bottom: 0.5rem;
+            }
+            
+            .footer-links a,
+            .footer-social a {
+                color: #ff5733;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+            
+            .footer-links a:hover,
+            .footer-social a:hover {
+                text-decoration: underline;
+            }
+            
+            .footer-bottom {
+                text-align: center;
+                margin-top: 2rem;
+                font-size: 1rem;
+                color: #bbb;
+            }
+            
+            @media (max-width: 768px) {
+                .footer-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .footer-info,
+                .footer-links,
+                .footer-social,
+                .footer-contact {
+                    text-align: center;
+                }
+            }
+            /* Responsive Design */
+            
+            @media (max-width: 600px) {
+                nav ul {
+                    flex-direction: column;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                #services {
+                    grid-template-columns: 1fr;
+                }
